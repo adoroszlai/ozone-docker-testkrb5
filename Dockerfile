@@ -21,7 +21,7 @@ RUN apk add --no-cache bash ca-certificates openssl krb5-server krb5 wget && upd
    chmod +x /usr/local/bin/dumb-init
 WORKDIR /opt
 COPY krb5.conf /etc/
-COPY kadm5.acl /var/lib/krb5kdc/kadm5.acl
+COPY krb5kdc/* /var/lib/krb5kdc/
 COPY init.sh .
 RUN chmod +x ./init.sh && ./init.sh
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]

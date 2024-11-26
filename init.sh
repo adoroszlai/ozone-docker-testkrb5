@@ -20,7 +20,7 @@
 
 set -e
 
-kdb5_util create -s -P Welcome1
+# kdb5_util create -s -P Welcome1
 
 kadmin.local -q "addprinc -randkey admin/admin@EXAMPLE.COM"
 
