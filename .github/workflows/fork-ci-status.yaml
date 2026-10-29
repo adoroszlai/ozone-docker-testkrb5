@@ -19,6 +19,10 @@ on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+  # API metadata only: no checkout, artifacts, caches, or PR code execution.
+  workflow_run: # zizmor: ignore[dangerous-triggers]
+    workflows: [Fork CI signal]
+    types: [completed]
 
 permissions:
   actions: read
