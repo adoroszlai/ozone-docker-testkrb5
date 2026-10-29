@@ -39,6 +39,20 @@ jobs:
         with:
           workflow: build-and-tag.yaml
           base-branches: master
-          check-name: CI (fork)
+          check-name: build-and-tag (fork)
+          recent-hours: 1
+          sweep-minutes: '15'
+      - uses: apache/infrastructure-actions/fork-ci@fork-ci/v1
+        with:
+          workflow: zizmor.yaml
+          base-branches: master
+          check-name: zizmor (fork)
+          recent-hours: 1
+          sweep-minutes: '15'
+      - uses: apache/infrastructure-actions/fork-ci@fork-ci/v1
+        with:
+          workflow: asf-allowlist-check.yaml
+          base-branches: master
+          check-name: asf-allowlist-check (fork)
           recent-hours: 1
           sweep-minutes: '15'

@@ -20,6 +20,7 @@ on:
     paths:
       - '.github/workflows/**'
       - '.github/zizmor.y*ml'
+  workflow_dispatch:
 
 permissions: { }
 

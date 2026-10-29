@@ -16,10 +16,10 @@
 name: "ASF Allowlist Check"
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - ".github/workflows/**"
+  workflow_dispatch:
 
 permissions:
   contents: read
