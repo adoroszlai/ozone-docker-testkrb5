@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM alpine:3.13.2
+FROM alpine:3.24.3
 # hadolint ignore=DL3018
 RUN apk add --no-cache bash ca-certificates openssl krb5-server krb5 wget && update-ca-certificates && \
    wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 && \
