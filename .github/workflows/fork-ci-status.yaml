@@ -31,7 +31,7 @@ concurrency:
 
 jobs:
   bridge:
-    if: github.repository_owner == 'apache'
+    if: github.repository_owner == 'adoroszlai'
     runs-on: ubuntu-slim
     timeout-minutes: 10
     steps:
